@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "description": "Personal portfolio website for Jaakko Maatiala",
   "main": "index.html",
+
   "scripts": {
-    "start": "echo \"Open index.html in your browser\"",
-    "build": "echo \"No build step required\""
-  },
+  "start": "node server.js"
+  }
+
   "author": "Jaakko Maatiala",
   "license": "MIT"
 }
