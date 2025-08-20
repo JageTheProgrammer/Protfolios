@@ -1,0 +1,12 @@
+{
+  "name": "protfolios",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Jaakko Maatiala",
+  "main": "public/index.html",
+  "scripts": {
+    "start": "echo \"Open index.html in your browser\"",
+    "build": "echo \"No build step required\""
+  },
+  "author": "Jaakko Maatiala",
+  "license": "MIT"
+}

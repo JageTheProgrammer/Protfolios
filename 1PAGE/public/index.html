@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jaakko Maatiala | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<header>
+  <nav>
+    <h1>Jaakko Maatiala</h1>
+
+    <!-- Hamburger Menu (mobile only) -->
+    <div class="menu-toggle">
+      ☰
+    </div>
+
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <h2>Custom Websites for Small Businesses — Affordable & Professional</h2>
+    <p>I’m Jaakko, a 16-year-old web developer from Finland, studying programming at Keuda Sarviniitynkatu Kerava.</p>
+    <a href="#contact" class="btn">Hire Me</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <img src="img/withbg.jpeg" alt="Profile Photo" />
+    <p>Hey! I’m Jaakko Maatiala, 16 years old from Finland. I study programming at Keuda Sarviniitynkatu Kerava, and I’m passionate about building modern, responsive websites. My goal is to help small businesses get affordable websites that actually work.</p>
+  </section>
+
+  <section id="services">
+  <h2>My Offers</h2>
+  <div class="service-cards">
+    <div class="card">
+      <h3>Basic Website</h3>
+      <p>100–300€</p>
+      <ul>
+        <li>3–5 pages</li>
+        <li>Responsive & SEO-friendly</li>
+        <li>No backend</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Custom Website + Backend</h3>
+      <p>300–500€</p>
+      <ul>
+        <li>Extra customization</li>
+        <li>Backend & database</li>
+        <li>Advanced features</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Monthly Maintenance</h3>
+      <p>From 30€/month</p>
+      <ul>
+        <li>Bug fixes & edits</li>
+        <li>Security updates</li>
+        <li>Backup & monitoring</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <div class="projects">
+      <img src="img/main.png" alt="Project 1" />
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <input type="text" name="from_name" placeholder="Your Name" required />
+    <input type="email" name="from_email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<footer>
+    <p>© <span id="year"></span> Jaakko Maatiala - All Rights Reserved</p>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</footer>
+
+  <!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init("hYEWavyYwhnNECROV"); // <-- Replace with your EmailJS Public Key
+  })();
+</script>
+  <script src="js/scipt.js"></script>
+</body>
+</html>
