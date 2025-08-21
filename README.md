@@ -1,7 +1,8 @@
-# 👋 Hi, I'm JageTheProgrammer!
+# 👋 Hi, I'm Jaakko Maatiala!
 
-## 🚀 About Me
-I'm a student and passionate web developer with experience in several programming languages and frameworks. I love building cool projects, learning new technologies, and sharing my journey on social media.
+## 🚀 About This Repo
+I made this website to advertise my self as a web developer! I'm just studying To become certified Web Developer but doing coding on side hustle of school! I would really appreciate if you can leave honest review of my website on contact me! 
+https://jaakkoweb.vercel.app/#contact
 
 ---
 
