@@ -58,7 +58,7 @@ A simple blog platform with authentication and markdown support.
 
 - **TikTok:** [https://tiktok.com/@jagethecoder]
 - **YouTube:** [https://youtube.com/@jaakogt]
-- **Instagram:** [Your Instagram Handle/Link]
+- **Instagram:** [https://instagram.com/jaakkohub]
 
 ---
 
