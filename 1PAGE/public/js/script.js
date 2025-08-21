@@ -20,6 +20,9 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
     });
 });
 
+document.getElementById("year").textContent = new Date().getFullYear();
+
+
 // Smooth scroll for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener("click", function(e) {
