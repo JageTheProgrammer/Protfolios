@@ -139,6 +139,7 @@ header {
 }
 
 .nav-list li a {
+  text-algin: center;
   color: #fff;
   border-radius: 20px;
   transition: background 0.3s, color 0.3s, box-shadow 0.3s;
@@ -179,9 +180,7 @@ header {
     box-shadow: 0 8px 32px #4fc3f733;
     z-index: 1050;
     gap: 1.2rem;
-    align-items: flex-start;
-    order: 2;
-    margin-left: 0;
+    align-items: center;
   }
   .nav-list.show {
     display: flex;
