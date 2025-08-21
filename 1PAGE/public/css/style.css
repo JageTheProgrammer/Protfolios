@@ -48,8 +48,8 @@ img:hover {
   margin: 0 auto;
   padding: 0 1rem;
 }
-.container h1{
-  font-size: 0.7rem;
+.container h1{ 
+  font-size: 1.5rem;
   margin-bottom: 1rem;
   color: #4fc3f7;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
