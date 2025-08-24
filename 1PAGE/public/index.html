@@ -174,6 +174,57 @@
   </div>
 </footer>
 
+
+<script>
+// =========================
+// Hamburger Menu Toggle
+// =========================
+const menuToggle = document.querySelector('.menu-toggle');
+const navList = document.querySelector('.nav-list');
+
+menuToggle.addEventListener('click', () => {
+  navList.classList.toggle('active');
+  menuToggle.classList.toggle('open');
+});
+
+// Animated hamburger lines
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+});
+
+// =========================
+// Scroll Reveal Animation
+// =========================
+const revealElements = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  const windowHeight = window.innerHeight;
+  const revealPoint = 100;
+
+  revealElements.forEach(el => {
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - revealPoint) {
+      el.classList.add('active');
+    } else {
+      el.classList.remove('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+// =========================
+// Smooth Scroll for Nav
+// =========================
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function(e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href'))
+      .scrollIntoView({ behavior: 'smooth' });
+  });
+});    </script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function(){
