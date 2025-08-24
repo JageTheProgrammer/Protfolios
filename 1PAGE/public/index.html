@@ -13,6 +13,13 @@
   <header>
     <nav class="navbar">
       <h1 class="logo">Jaakko Maatiala</h1>
+           <!-- Hamburger icon -->
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
       <ul class="nav-list">
         <li><a href="#about">Tietoa</a></li>
         <li><a href="#skills">Taidot</a></li>
@@ -140,7 +147,23 @@
     <p>© <span id="year"></span> Jaakko Maatiala - Kaikki oikeudet pidätetään</p>
     <p>Teen projekteja Ukko.fi-palvelun kautta, joten yhteistyö kanssani on helppoa ja täysin virallista.</p>
   </footer>
+  <script>// Hamburger toggle
+const hamburger = document.getElementById("hamburger");
+const navList = document.getElementById("nav-list");
 
+hamburger.addEventListener("click", () => {
+  hamburger.classList.toggle("active");
+  navList.classList.toggle("active");
+});
+
+// Sulje menu kun klikataan linkkiä
+document.querySelectorAll(".nav-list a").forEach(link => {
+  link.addEventListener("click", () => {
+    hamburger.classList.remove("active");
+    navList.classList.remove("active");
+  });
+});
+</script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
