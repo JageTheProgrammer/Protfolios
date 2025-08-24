@@ -151,21 +151,33 @@
     <p>Teen projekteja Ukko.fi-palvelun kautta, joten yhteistyö kanssani on helppoa ja täysin virallista.</p>
   </footer>
   <script>// Hamburger toggle
-   
-const hamburger = document.getElementById('hamburger');
+
+    const hamburger = document.getElementById('hamburger');
 const navList = document.querySelector('.nav-list');
+const overlay = document.getElementById('overlay');
 
 hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active'); // tämä animoi viivat
-  navList.classList.toggle('active');   // tämä näyttää navin
+  hamburger.classList.toggle('active');
+  navList.classList.toggle('active');
+  overlay.classList.toggle('active');
 });
+
 // Sulje menu kun klikataan linkkiä
 document.querySelectorAll(".nav-list a").forEach(link => {
   link.addEventListener("click", () => {
     hamburger.classList.remove("active");
     navList.classList.remove("active");
+    overlay.classList.remove("active");
   });
 });
+
+// Sulje menu kun klikataan overlayta
+overlay.addEventListener("click", () => {
+  hamburger.classList.remove("active");
+  navList.classList.remove("active");
+  overlay.classList.remove("active");
+});
+
 </script>
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
