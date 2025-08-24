@@ -1,4 +1,8 @@
 /* Fontit & perusasetukset */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
@@ -277,4 +281,14 @@ footer {
     font-size: 1rem;
     color: var(--text-color);
   }
+}
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
