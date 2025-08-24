@@ -177,25 +177,15 @@
 
 <script>
 // =========================
-// Hamburger Menu Toggle
-// =========================
-const menuToggle = document.querySelector('.menu-toggle');
-const navList = document.querySelector('.nav-list');
-
-menuToggle.addEventListener('click', () => {
-  navList.classList.toggle('active');
-  menuToggle.classList.toggle('open');
-});
-
-// Animated hamburger lines
-menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-});
-
-// =========================
-// Scroll Reveal Animation
-// =========================
-const revealElements = document.querySelectorAll('.reveal');
+// Scroll reveal automaattisesti kaikille osioille
+const revealElements = document.querySelectorAll(
+  '#about .about-content > div, ' +
+  '#skills .skills-list li, ' +
+  '#services .card, ' +
+  '#portfolio .portfolio-item, ' +
+  '#testimonials blockquote, ' +
+  '#contact .contact-form'
+);
 
 function revealOnScroll() {
   const windowHeight = window.innerHeight;
@@ -214,17 +204,7 @@ function revealOnScroll() {
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
-
-// =========================
-// Smooth Scroll for Nav
-// =========================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href'))
-      .scrollIntoView({ behavior: 'smooth' });
-  });
-});    </script>
+</script>
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function(){
