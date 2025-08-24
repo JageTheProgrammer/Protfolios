@@ -184,6 +184,14 @@ a:hover {
   transform: translateY(-5px);
   border: 1px solid #4caf50;
 }
+.card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.card li {
+  padding: 0.3rem 0;
+}
 .price {
   font-size: 1.2rem;
   margin-bottom: 1rem;
