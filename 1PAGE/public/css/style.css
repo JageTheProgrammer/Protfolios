@@ -116,7 +116,7 @@ a:hover {
   color: #4caf50;
 }
 
-.img1 {
+.hero-img {
   margin-top: 1.5rem;
   height: 200ox;
   width: 200px;
@@ -124,9 +124,7 @@ a:hover {
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0,0,0,0.6);
 }
-.hero-img {
-  width: 100%;
-}
+
 /* Yleiset osiot */
 .section {
   padding: 4rem 2rem;
