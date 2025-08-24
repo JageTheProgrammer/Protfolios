@@ -2,220 +2,116 @@
 <html lang="fi">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jaakko Maatiala | Portfolio</title>
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-  <nav class="navbar">
+  <header class="main-header">
     <div class="container">
-     <h1 class="logo">Jaakko Maatiala</h1>
-      <div class="menu-toggle" id="menu-toggle">
-       <span></span> 
-       <span></span>
-       <span></span>
-      </div>
-      <ul class="nav-list" id="nav-list">
-        <li><a href="#about">Minusta</a></li>
-        <li><a href="#skills">Osaaminen</a></li>
-        <li><a href="#services">Palvelut</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#testimonials">Suositukset</a></li>
-        <li><a href="#contact">Yhteystiedot</a></li>
+      <h1 class="logo">Jaakko Maatiala</h1>
+      <nav>
+        <ul class="nav-list">
+          <li><a href="#about">Minusta</a></li>
+          <li><a href="#skills">Osaaminen</a></li>
+          <li><a href="#services">Palvelut</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="hero" class="hero">
+    <div class="container center">
+      <img src="img/withbg.jpeg" alt="Profiilikuva" class="profile-pic">
+      <h2>Modernit ja selkeät nettisivut yrityksellesi</h2>
+      <p>Olen <strong>Jaakko Maatiala</strong>, 16-vuotias web-kehittäjä Suomesta. Teen projekteja Ukko.fi-palvelun kautta – yhteistyö kanssani on helppoa ja täysin virallista.</p>
+      <a href="#contact" class="btn">Ota yhteyttä</a>
+    </div>
+  </section>
+
+  <section id="about" class="section center">
+    <div class="container">
+      <h2>Minusta</h2>
+      <p>Olen intohimoinen nuori kehittäjä, joka rakentaa moderneja ja responsiivisia nettisivuja. Panostan selkeään viestintään, luotettavuuteen ja ratkaisuihin, jotka tukevat yrityksesi kasvua.</p>
+    </div>
+  </section>
+
+  <section id="skills" class="section center alt-bg">
+    <div class="container">
+      <h2>Osaaminen</h2>
+      <ul class="skills-list">
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React & Node.js</li>
+        <li>Responsiivinen suunnittelu</li>
+        <li>SEO & UI/UX-perusteet</li>
       </ul>
     </div>
-  </nav>
-</header>
+  </section>
 
-<section id="hero" class="hero-section">
-  <div class="container hero-content">
-    <div class="hero-text">
-      <h2 class="fade-in">Modernit ja räätälöidyt <span2>nettivisivut</span2> pienyrityksille</h2>
-      <p class="fade-in delay-1">Edullisia ja ammattimaisia ratkaisuja – Jaakko, 16-vuotias web-kehittäjä Suomesta.</p>
-      <a href="#contact" class="btn pulse">Ota yhteyttä</a>
-    </div>
-    <div class="hero-img">
-      <img src="img/withbg.jpeg" alt="Profiilikuva" />
-    </div>
-  </div>
-</section>
-
-<section id="about" class="section">
-  <div class="container">
-    <h2>Minusta</h2>
-    <div class="about-content">
-      <img src="img/withbg.jpeg" alt="Profiilikuva" class="about-img" />
-      <div>
-        <p>Hei! Olen <strong>Jaakko Maatiala</strong>, 16-vuotias web-kehittäjä Suomesta. Opiskelen ohjelmointia Keudassa ja intohimonani on rakentaa moderneja, responsiivisia nettisivuja. Tavoitteeni on auttaa pienyrityksiä saamaan toimivat ja edulliset sivut.</p>
-        <p>Teen projekteja <strong>Ukko.fi-palvelun kautta</strong>, joten yhteistyö kanssani on helppoa ja täysin virallista.</p>
-        <p>Osaamiseeni kuuluvat <strong>HTML, CSS, JavaScript</strong> sekä useat kehykset ja työkalut. Opin jatkuvasti uutta ja haluan kehittää taitojani koko ajan. Panostan selkeään viestintään, luotettavuuteen ja tuloksiin, jotka tukevat yrityksesi kasvua verkossa.</p>
+  <section id="services" class="section center">
+    <div class="container">
+      <h2>Palvelut</h2>
+      <div class="service-cards">
+        <div class="card">
+          <h3>Peruspaketti</h3>
+          <p class="price">300 €</p>
+          <p>Kolme sivua, responsiivinen design ja yhteydenottolomake.</p>
+        </div>
+        <div class="card">
+          <h3>Laajennettu paketti</h3>
+          <p class="price">600 €</p>
+          <p>Kuusi sivua, kuvagalleria/tuotesivu ja SEO-perusasetukset.</p>
+        </div>
+        <div class="card">
+          <h3>Räätälöity ratkaisu</h3>
+          <p class="price">1000 € +</p>
+          <p>Verkkokaupat, ajanvarausjärjestelmät ja muut erikoisratkaisut.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="skills" class="section alt-bg">
-  <div class="container">
-    <h2>Osaaminen</h2>
-    <ul class="skills-list">
-      <li>HTML5 & CSS3</li>
-      <li>JavaScript (ES6+)</li>
-      <li>Responsiivinen web-suunnittelu</li>
-      <li>React & Vue.js</li>
-      <li>Node.js & Express</li>
-      <li>Versionhallinta (Git & GitHub)</li>
-      <li>UI/UX-periaatteet</li>
-      <li>Hakukoneoptimoinnin perusteet</li>
-      <li>Graafisen suunnittelun perusteet</li>
-    </ul>
-  </div>
-</section>
-
-<section id="services" class="section">
-  <div class="container">
-    <h2>Palvelut</h2>
-    <div class="service-cards">
-      <div class="card shadow hover-up">
-        <h3>Peruspaketti</h3>
-        <p class="price">300 €</p>
-        <ul>
-          <li>3 sivua (etusivu, palvelut, yhteystiedot)</li>
-          <li>Responsiivinen design</li>
-          <li>Yhteydenottolomake</li>
-        </ul>
-      </div>
-      <div class="card shadow hover-up">
-        <h3>Laajennettu paketti</h3>
-        <p class="price">600 €</p>
-        <ul>
-          <li>6 sivua</li>
-          <li>Kuvagalleria/tuotesivu</li>
-          <li>Google Maps -integraatio</li>
-          <li>SEO-perusasetukset</li>
-        </ul>
-      </div>
-      <div class="card shadow hover-up">
-        <h3>Räätälöity ratkaisu</h3>
-        <p class="price">alkaen 1000 €</p>
-        <ul>
-          <li>Verkkokauppa tai ajanvaraus</li>
-          <li>Erikoisratkaisut tarpeen mukaan</li>
-        </ul>
-      </div>
-      <div class="card shadow hover-up">
-        <h3>Ylläpito</h3>
-        <p class="price">Alkaen 30€/kk</p>
-        <ul>
-          <li>Päivitykset & korjaukset</li>
-          <li>Tietoturva</li>
-          <li>Varmuuskopiot</li>
-        </ul>
+  <section id="portfolio" class="section center alt-bg">
+    <div class="container">
+      <h2>Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item"><img src="demo1.png" alt=""><p>Pizzeria Demo</p></div>
+        <div class="portfolio-item"><img src="demo2.png" alt=""><p>Autokorjaamo Demo</p></div>
+        <div class="portfolio-item"><img src="demo3.png" alt=""><p>Parturi Demo</p></div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="portfolio" class="section">
-  <div class="container">
-    <h2>Portfolio</h2>
-    <div class="portfolio-grid">
-      <div class="portfolio-item">
-        <img src="demo1.png" alt="Pizzeria Demo">
-        <p>Pizzeria Demo</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="demo2.png" alt="Autokorjaamo Demo">
-        <p>Autokorjaamo Demo</p>
-      </div>
-      <div class="portfolio-item">
-        <img src="demo3.png" alt="Parturi Demo">
-        <p>Parturi Demo</p>
-      </div>
+  <section id="contact" class="section center">
+    <div class="container">
+      <h2>Ota yhteyttä</h2>
+      <p>Voit ottaa minuun yhteyttä lomakkeella, sähköpostitse tai puhelimitse. Vastaan yleensä 48h kuluessa.</p>
+      <form id="contact-form" class="contact-form">
+        <input type="text" name="from_name" placeholder="Nimesi" required>
+        <input type="email" name="from_email" placeholder="Sähköpostisi" required>
+        <textarea name="message" placeholder="Viestisi" required></textarea>
+        <button type="submit" class="btn">Lähetä</button>
+      </form>
+      <p>Sähköposti: <a href="mailto:sinun.email@gmail.com">sinun.email@gmail.com</a></p>
+      <p>Puhelin: +358 40 123 4567</p>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="testimonials" class="section alt-bg">
-  <div class="container">
-    <h2>Suositukset</h2>
-    <div class="testimonials">
-      <blockquote>
-        "Jaakko teki nettisivumme nopeasti ja ammattimaisesti. Yhteydenpito oli sujuvaa ja lopputulos ylitti odotuksemme!"<br>
-        <span>- Asiakas, Suomi</span>
-      </blockquote>
-      <blockquote>
-        "Todella lahjakas ja luotettava kehittäjä. Suosittelen lämpimästi pienyritysten nettisivuihin."<br>
-        <span>- Pienyrittäjä</span>
-      </blockquote>
+  <footer>
+    <div class="container center">
+      <p>© <span id="year"></span> Jaakko Maatiala</p>
+      <p>Teen projekteja Ukko.fi-palvelun kautta – yhteistyö kanssani on helppoa ja virallista.</p>
     </div>
-  </div>
-</section>
+  </footer>
 
-<section id="contact" class="section">
-  <div class="container">
-    <h2>Ota yhteyttä</h2>
-    <p>Voit ottaa minuun yhteyttä alla olevalla lomakkeella, sähköpostitse tai puhelimitse. Vastaan yleensä 48h kuluessa.</p>
-    <form id="contact-form" class="contact-form shadow">
-      <input type="text" name="from_name" placeholder="Nimesi" required />
-      <input type="email" name="from_email" placeholder="Sähköpostisi" required />
-      <textarea name="message" placeholder="Viestisi" required></textarea>
-      <button type="submit" class="btn">Lähetä</button>
-      <div id="form-message"></div>
-    </form>
-    <p>Sähköposti: <a href="mailto:sinun.email@gmail.com">sinun.email@gmail.com</a></p>
-    <p>Puhelin: +358 40 123 4567</p>
-  </div>
-</section>
-
-<footer>
-  <div class="container">
-    <p>© <span id="year"></span> Jaakko Maatiala – Kaikki oikeudet pidätetään</p>
-    <p>Teen projekteja Ukko.fi-palvelun kautta.</p>
-  </div>
-</footer>
-
-
-<script>
-// =========================
-// Scroll reveal automaattisesti kaikille osioille
-const revealElements = document.querySelectorAll(
-  '#about .about-content > div, ' +
-  '#skills .skills-list li, ' +
-  '#services .card, ' +
-  '#portfolio .portfolio-item, ' +
-  '#testimonials blockquote, ' +
-  '#contact .contact-form'
-);
-
-function revealOnScroll() {
-  const windowHeight = window.innerHeight;
-  const revealPoint = 100;
-
-  revealElements.forEach(el => {
-    const elementTop = el.getBoundingClientRect().top;
-
-    if (elementTop < windowHeight - revealPoint) {
-      el.classList.add('active');
-    } else {
-      el.classList.remove('active');
-    }
-  });
-}
-
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
-</script>
-<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-<script>
-  (function(){
-    emailjs.init("hYEWavyYwhnNECROV");
-  })();
-</script>
-<script src="js/script.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
