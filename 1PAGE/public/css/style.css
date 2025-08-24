@@ -53,6 +53,7 @@ a:hover {
 }
 /* Hamburger menu (mobile) */
 .hamburger {
+  background: rgba(0,0,0,0.6);
   display: none;
   flex-direction: column;
   justify-content: space-between;
