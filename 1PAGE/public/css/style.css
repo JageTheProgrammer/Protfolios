@@ -110,12 +110,13 @@ a:hover {
 .hero-content {
   max-width: 800px;
   margin: auto;
+  padding: auto;
 }
 .hero h2 span {
   color: #4caf50;
 }
 .hero-img {
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   height: 200ox;
   width: 200px;
   max-width: auto;
