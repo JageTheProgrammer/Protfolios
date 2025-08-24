@@ -64,6 +64,32 @@ header {
   text-shadow: 0 2px 10px var(--blue);
 }
 
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background: var(--light);
+  margin: 4px 0;
+  border-radius: 3px;
+  transition: 0.3s;
+}
+
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px,5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px,-5px);
+}
+
 .nav-list {
   display: flex;
   gap: 2rem;
@@ -83,6 +109,29 @@ header {
   background: var(--gradient);
   color: #fff;
   box-shadow: 0 0 12px var(--violet);
+}
+
+/* Mobile nav */
+@media (max-width:768px) {
+  .menu-toggle {
+    display: flex;
+  }
+  .nav-list {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background: rgba(0,0,0,0.9);
+    flex-direction: column;
+    width: 200px;
+    transform: translateX(100%);
+    transition: 0.3s;
+    padding: 1rem;
+    border-radius: 0 0 0 12px;
+    gap: 1rem;
+  }
+  .nav-list.active {
+    transform: translateX(0);
+  }
 }
 
 /* =======================
@@ -174,6 +223,10 @@ header {
   text-align: center;
 }
 
+/* Custom section background */
+.section.alt-bg { background: #111; }
+
+/* Section title */
 .section h2 {
   font-size: 2.2rem;
   color: var(--blue);
@@ -350,52 +403,8 @@ footer {
 }
 
 /* =======================
-   Scroll Reveal Animations
+   Scroll Animations for Sections
 ======================= */
-.reveal {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: all 0.8s ease-out;
-}
-
-.reveal.active {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Lisää eri suuntiin liikettä */
-.reveal-left {
-  transform: translateX(-50px);
-}
-.reveal-left.active {
-  transform: translateX(0);
-}
-
-.reveal-right {
-  transform: translateX(50px);
-}
-.reveal-right.active {
-  transform: translateX(0);
-}
-
-.reveal-up {
-  transform: translateY(50px);
-}
-.reveal-up.active {
-  transform: translateY(0);
-}
-
-.reveal-down {
-  transform: translateY(-50px);
-}
-.reveal-down.active {
-  transform: translateY(0);
-}
-
-/* =======================
-   Käyttö esimerkki
-======================= */
-/* Esim. About-section divit */
 #about .about-content > div,
 #skills .skills-list li,
 #services .card,
@@ -407,7 +416,6 @@ footer {
   transition: all 0.8s ease-out;
 }
 
-/* Kun scrollattu näkyviin */
 #about .about-content > div.active,
 #skills .skills-list li.active,
 #services .card.active,
@@ -417,3 +425,14 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* =======================
+   Optional Section Backgrounds
+======================= */
+#hero { background-color: #000; }
+#about { background-color: #111; }
+#skills { background-color: #0b0b0b; }
+#services { background-color: #111; }
+#portfolio { background-color: #0b0b0b; }
+#testimonials { background-color: #111; }
+#contact { background-color: #0b0b0b; }
