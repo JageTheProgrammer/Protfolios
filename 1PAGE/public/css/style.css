@@ -264,7 +264,7 @@ footer {
     position: absolute;
     top: 70px;
     right: 0;
-    background: var(--card-bg);
+    background: #1a1a1a;
     width: 220px;
     padding: 1rem;
     border-radius: 12px;
