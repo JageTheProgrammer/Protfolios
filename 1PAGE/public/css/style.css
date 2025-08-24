@@ -60,7 +60,7 @@ a:hover {
   display: block;
   height: 3px;
   width: 100%;
-  background: var(--text-color);
+  background: #fff;
   border-radius: 2px;
   transition: 0.3s;
 }
