@@ -76,7 +76,24 @@ a:hover {
   transform: rotate(-45deg) translateY(-8px);
 }
 
+/* Overlay-tausta */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 5;
+}
 
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+}
 
 /* Hero */
 .hero {
