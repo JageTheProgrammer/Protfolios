@@ -290,3 +290,46 @@ header {
   .nav-list { display: none; }
   .menu-toggle { display: flex; }
 }
+/* Scroll Reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hamburger animation */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* Mobile nav animation */
+.nav-list.active {
+  display: flex;
+  flex-direction: column;
+  background: rgba(13, 17, 23, 0.95);
+  position: absolute;
+  top: 70px;
+  right: 0;
+  width: 70%;
+  padding: 2rem;
+  border-left: 2px solid var(--accent);
+  box-shadow: -6px 0 20px rgba(0,0,0,0.5);
+  animation: slideIn 0.4s ease forwards;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
