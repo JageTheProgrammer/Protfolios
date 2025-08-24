@@ -1,11 +1,11 @@
 /* =======================
-  Global Styles
+   Global Styles
 ======================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Montserrat', "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -21,11 +21,10 @@ body {
   background: var(--dark);
   color: var(--light);
   line-height: 1.6;
-  overflow-x: hidden;
 }
 
 /* =======================
-  Scroll Reveal Utility
+   Scroll Reveal Utility
 ======================= */
 .reveal {
   opacity: 0;
@@ -38,16 +37,17 @@ body {
 }
 
 /* =======================
-  Navbar
+   Navbar
 ======================= */
 header {
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0,0,0,0.85);
   position: sticky;
   top: 0;
   z-index: 1000;
   backdrop-filter: blur(8px);
   box-shadow: 0 2px 12px rgba(0,0,0,0.4);
 }
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -56,17 +56,20 @@ header {
   width: 90%;
   margin: auto;
 }
+
 .logo {
   font-size: 1.7rem;
   font-weight: 700;
   color: var(--violet);
   text-shadow: 0 2px 10px var(--blue);
 }
+
 .nav-list {
   display: flex;
   gap: 2rem;
   list-style: none;
 }
+
 .nav-list li a {
   color: var(--light);
   font-weight: 500;
@@ -74,6 +77,7 @@ header {
   border-radius: 20px;
   transition: 0.3s;
 }
+
 .nav-list li a:hover,
 .nav-list li a.active {
   background: var(--gradient);
@@ -82,7 +86,7 @@ header {
 }
 
 /* =======================
-  Hero (Parallax)
+   Hero Section
 ======================= */
 .hero-section {
   min-height: 100vh;
@@ -90,53 +94,86 @@ header {
   align-items: center;
   justify-content: center;
   position: relative;
-  background: url('hero-bg.jpg') center/cover fixed;
+  background: url('img/withbg.jpeg') center/cover fixed;
 }
-.hero-overlay {
+
+.hero-section::after {
+  content:"";
   position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.65);
+  inset:0;
+  background: rgba(0,0,0,0.6);
 }
+
 .hero-content {
   position: relative;
   text-align: center;
   z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
 }
-.hero-content h1 {
-  font-size: 3rem;
+
+.hero-text {
+  max-width: 500px;
+}
+
+.hero-text h2 {
+  font-size: 2.8rem;
   color: #fff;
   text-shadow: 0 4px 24px #000;
 }
-.hero-content p {
+
+.hero-text p {
   font-size: 1.2rem;
   margin-top: 1rem;
-  opacity: 0.9;
+  opacity: 0.95;
 }
-.btn {
-  margin-top: 2rem;
-  padding: 1rem 2.5rem;
-  border: none;
-  border-radius: 30px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  color: #fff;
-  background: var(--gradient);
-  box-shadow: 0 0 16px var(--violet);
-  cursor: pointer;
+
+.hero-img img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--blue);
+  box-shadow: 0 8px 32px var(--blue);
   transition: 0.3s;
 }
+.hero-img img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 0 20px var(--violet), 0 0 40px var(--blue);
+}
+
+/* =======================
+   Button
+======================= */
+.btn {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #fff;
+  background: var(--gradient);
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 0 16px var(--violet);
+  transition: 0.3s;
+}
+
 .btn:hover {
   transform: translateY(-5px) scale(1.05);
   box-shadow: 0 0 25px var(--blue), 0 0 40px var(--violet);
 }
 
 /* =======================
-  Section Styling
+   Sections
 ======================= */
 .section {
   padding: 5rem 1rem;
   text-align: center;
 }
+
 .section h2 {
   font-size: 2.2rem;
   color: var(--blue);
@@ -144,55 +181,60 @@ header {
   text-shadow: 0 2px 12px #000;
 }
 
-/* =======================
-  About
-======================= */
-#about {
-  background: #111;
-}
-#about p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 1.1rem;
+/* About */
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
 }
 
-/* =======================
-  Skills
-======================= */
-#skills .skills-list {
+.about-img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid var(--blue);
+  box-shadow: 0 8px 32px var(--blue);
+}
+
+.about-content div p {
+  margin-bottom: 1rem;
+}
+
+/* Skills */
+.skills-list {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
   justify-content: center;
+  list-style: none;
 }
+
 .skills-list li {
   background: #111;
-  border: 2px solid var(--violet);
   color: var(--violet);
+  border: 2px solid var(--violet);
   padding: 0.7rem 1.5rem;
   border-radius: 18px;
   font-weight: 500;
   transition: 0.3s;
-  list-style: none;
 }
+
 .skills-list li:hover {
   background: var(--gradient);
   color: #fff;
   box-shadow: 0 0 15px var(--violet);
 }
 
-/* =======================
-  Services
-======================= */
-#services {
-  background: #0d0d14;
-}
+/* Services */
 .service-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
 }
+
 .card {
   background: rgba(20,20,30,0.9);
   border: 2px solid var(--blue);
@@ -200,9 +242,10 @@ header {
   padding: 2rem;
   width: 300px;
   color: var(--light);
-  transition: 0.3s;
   box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  transition: 0.3s;
 }
+
 .card:hover {
   transform: translateY(-12px) scale(1.05);
   background: var(--gradient);
@@ -211,28 +254,30 @@ header {
   box-shadow: 0 0 30px var(--violet);
 }
 
-/* =======================
-  Portfolio
-======================= */
-#portfolio {
-  background: #111;
+/* Portfolio */
+.portfolio-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
 }
-.portfolio-img {
+
+.portfolio-item img {
   border-radius: 16px;
   border: 3px solid var(--blue);
   box-shadow: 0 6px 24px rgba(0,0,0,0.5);
   transition: 0.4s;
+  max-width: 300px;
 }
-.portfolio-img:hover {
+
+.portfolio-item img:hover {
   transform: scale(1.08) rotate(-2deg);
   box-shadow: 0 0 25px var(--violet);
   border-color: #fff;
   filter: brightness(1.1);
 }
 
-/* =======================
-  Testimonials
-======================= */
+/* Testimonials */
 #testimonials blockquote {
   background: #1a1a25;
   border-left: 5px solid var(--violet);
@@ -242,24 +287,20 @@ header {
   box-shadow: 0 4px 20px rgba(0,0,0,0.5);
   transition: 0.3s;
 }
+
 #testimonials blockquote:hover {
   transform: scale(1.02);
   box-shadow: 0 0 20px var(--violet);
 }
 
-/* =======================
-  Contact
-======================= */
-#contact {
-  background: var(--gradient);
-  color: #fff;
-}
+/* Contact */
 .contact-form {
   background: rgba(0,0,0,0.6);
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0,0,0,0.7);
 }
+
 .contact-form input,
 .contact-form textarea {
   border: 2px solid var(--violet);
@@ -269,11 +310,13 @@ header {
   width: 100%;
   transition: 0.3s;
 }
+
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #fff;
   box-shadow: 0 0 15px var(--blue);
 }
+
 .contact-form button {
   background: var(--gradient);
   color: #fff;
@@ -281,19 +324,96 @@ header {
   padding: 1rem;
   border-radius: 10px;
   font-weight: bold;
+  cursor: pointer;
   transition: 0.3s;
 }
+
 .contact-form button:hover {
   box-shadow: 0 0 20px var(--violet), 0 0 35px var(--blue);
 }
 
-/* =======================
-  Footer
-======================= */
+/* Footer */
 footer {
-  background: #0b0b0f;
+  background: var(--dark);
   color: var(--violet);
   text-align: center;
   padding: 2rem;
   border-top: 2px solid var(--blue);
+}
+
+/* Responsive */
+@media (max-width:768px){
+  .about-content { flex-direction: column; align-items:center;}
+  .hero-content { flex-direction: column; }
+  .skills-list, .service-cards, .portfolio-grid { flex-direction: column; gap:1rem;}
+  .hero-text h2 { font-size: 2rem;}
+}
+
+/* =======================
+   Scroll Reveal Animations
+======================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Lisää eri suuntiin liikettä */
+.reveal-left {
+  transform: translateX(-50px);
+}
+.reveal-left.active {
+  transform: translateX(0);
+}
+
+.reveal-right {
+  transform: translateX(50px);
+}
+.reveal-right.active {
+  transform: translateX(0);
+}
+
+.reveal-up {
+  transform: translateY(50px);
+}
+.reveal-up.active {
+  transform: translateY(0);
+}
+
+.reveal-down {
+  transform: translateY(-50px);
+}
+.reveal-down.active {
+  transform: translateY(0);
+}
+
+/* =======================
+   Käyttö esimerkki
+======================= */
+/* Esim. About-section divit */
+#about .about-content > div,
+#skills .skills-list li,
+#services .card,
+#portfolio .portfolio-item,
+#testimonials blockquote,
+#contact .contact-form {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+
+/* Kun scrollattu näkyviin */
+#about .about-content > div.active,
+#skills .skills-list li.active,
+#services .card.active,
+#portfolio .portfolio-item.active,
+#testimonials blockquote.active,
+#contact .contact-form.active {
+  opacity: 1;
+  transform: translateY(0);
 }
